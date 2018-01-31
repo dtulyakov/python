@@ -3,7 +3,7 @@ FROM python:3-alpine
 COPY requirements.txt /requirements.txt
 
 RUN set -x \
-  && apk add -q --clean-protected --no-cache \
+  && apk add -q --update --clean-protected --no-cache \
      g++ \
   && pip install -r /requirements.txt \
   && rm /var/cache/apk/*
