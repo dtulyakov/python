@@ -1,6 +1,7 @@
 FROM python:3-alpine
 
 COPY requirements.txt /requirements.txt
+COPY rcssmin.sh /rcssmin.sh
 
 RUN set -x \
   && apk add -q --update --clean-protected --no-cache \
